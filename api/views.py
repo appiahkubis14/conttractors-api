@@ -26,7 +26,6 @@ def login_view(request):
 
 
 
-
 @api_view(['POST'])
 def register_contractor(request):
     serializer = ContractorSerializer(data=request.data)
@@ -38,6 +37,7 @@ def register_contractor(request):
 
 @api_view(['POST'])
 def register_farmer(request):
+    
     serializer = FarmerSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
