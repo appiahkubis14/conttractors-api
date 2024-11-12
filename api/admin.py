@@ -7,8 +7,10 @@ from django.utils.html import format_html
 @admin.register(Contractor)
 class ContractorAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields': ('full_name',)}),
-    )
+        (None, {'fields': ('full_name',)
+        }
+    ),
+)
     list_display = ['username', 'full_name', 'email', 'is_staff']
     search_fields = ['username', 'full_name', 'email']
 
