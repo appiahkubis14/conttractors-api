@@ -16,7 +16,7 @@ class ContractorAdmin(UserAdmin):
 
 # Registering the Farmer model
 class FarmerAdmin(admin.ModelAdmin):
-    list_display = ['full_name', 'date_of_birth', 'gender', 'contact_number', 'email', 'photo_display']
+    list_display = ['full_name', 'date_of_birth', 'gender', 'contact_number', 'email', 'address','photo_display']
     search_fields = ['full_name', 'email', 'contact_number']
     list_filter = ['gender']
 

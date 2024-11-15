@@ -31,7 +31,10 @@ class ContractorSerializer(serializers.ModelSerializer):
         return user
 
 
+
+
 class FarmerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Farmer
-        fields = '__all__'
+        fields = ['full_name', 'date_of_birth', 'gender', 'contact_number', 'email', 'address', 'photo']
+
